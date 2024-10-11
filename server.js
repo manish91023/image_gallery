@@ -16,6 +16,9 @@ dbConnection()
 const __filename=fileURLToPath(import.meta.url)
 const __dirname=path.dirname(__filename)
 
+// server static file fro  the vite build 
+app.use(express.static(path.join(__dirname,'galery app','dist')))
+
 //routes 
 app.use(cors({
     origin: 'http://localhost:5173', // Allow Vite frontend to make requests
