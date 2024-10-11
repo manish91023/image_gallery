@@ -6,10 +6,15 @@ import { dbConnection } from './dbConnection.js'
 import { router } from './Routes/route.js'
 import cors from 'cors'
 dotenv.config()
-
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 //connection for db 
 dbConnection()
+
+//es module fix
+const __filename=fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename)
 
 //routes 
 app.use(cors({
