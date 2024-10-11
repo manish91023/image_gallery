@@ -20,10 +20,7 @@ const __dirname=path.dirname(__filename)
 app.use(express.static(path.join(__dirname,'galery app','dist')))
 
 //routes 
-app.use(cors({
-    origin: 'http://localhost:5173', // Allow Vite frontend to make requests
-    methods: 'GET,POST' // Allow specific HTTP methods
-  }));
+app.use(cors())
 app.use('/',router)
 app.use(express.json())
 

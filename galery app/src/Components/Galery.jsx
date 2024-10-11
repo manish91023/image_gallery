@@ -10,7 +10,7 @@ const Galery = () => {
     // Configure Axios base URL
     try {
       const response = await axios.get(
-        `http://localhost:3000/get/all-image?page=${pageNum}&limit=10`,
+        `/get/all-image?page=${pageNum}&limit=10`,
         {
           headers: {
             Accept: "application/json",
